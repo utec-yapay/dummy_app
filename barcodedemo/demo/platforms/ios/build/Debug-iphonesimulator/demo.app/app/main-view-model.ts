@@ -11,30 +11,6 @@ export class HelloWorldModel extends Observable {
     this.barcodeScanner = new BarcodeScanner();
   }
 
-  public doCheckAvailable() {
-    this.barcodeScanner.available().then(avail => {
-      alert({
-        title: "Scanning available?",
-        message: avail ? "YES" : "NO",
-        okButtonText: "OK"
-      });
-    }, (err) => {
-      alert(err);
-    });
-  }
-
-  public doCheckHasCameraPermission() {
-    this.barcodeScanner.hasCameraPermission().then(permitted => {
-      alert({
-        title: "Has Camera permission?",
-        message: permitted ? "YES" : "NO",
-        okButtonText: "OK"
-      });
-    }, (err) => {
-      alert(err);
-    });
-  }
-
   public doRequestCameraPermission() {
     this.barcodeScanner.requestCameraPermission().then(
         function () {
@@ -44,67 +20,14 @@ export class HelloWorldModel extends Observable {
   }
 
   public doScanWithBackCamera() {
-    this.scan(false, true);
-  }
-
-  public doScanWithFrontCamera() {
-    this.scan(true, false);
-  }
-
-  public doScanWithTorch() {
-    this.scan(false, true, true, "portrait");
-  }
-
-  public doScanPortrait() {
-    this.scan(false, true, false, "portrait");
-  }
-
-  public doScanLandscape() {
-    this.scan(false, true, false, "landscape");
-  }
-
-  public doContinuousScan() {
-    this.barcodeScanner.scan({
-      reportDuplicates: true,
-      continuousScanCallback: function (result) {
-        console.log(`${result.format}: ${result.text} @ ${new Date().getTime()}`);
-      },
-      closeCallback: () => {
-        console.log("Scanner closed @ " + new Date().getTime());
-      }
-    });
-  }
-
-  public doContinuousScanMax3() {
-    let count = 0;
-    let self = this;
-    this.barcodeScanner.scan({
-      reportDuplicates: false,
-      closeCallback: () => {
-        console.log("Scanner closed @ " + new Date().getTime());
-      },
-      continuousScanCallback: function (result) {
-        count++;
-        console.log(result.format + ": " + result.text + " (count: " + count + ")");
-        if (count === 3) {
-          self.barcodeScanner.stop();
-          setTimeout(function () {
-            alert({
-              title: "Scanned 3 codes",
-              message: "Check the log for the results",
-              okButtonText: "Sweet!"
-            });
-          }, 1000);
-        }
-      }
-    });
+    this.scan(false, false);
   }
 
   private scan(front: boolean, flip: boolean, torch?: boolean, orientation?: string) {
     this.barcodeScanner.scan({
-      cancelLabel: "EXIT. Also, try the volume buttons!", // iOS only, default 'Close'
+      //cancelLabel: "EXIT. Also, try the volume buttons!", // iOS only, default 'Close'
       cancelLabelBackgroundColor: "#333333", // iOS only, default '#000000' (black)
-      message: "Use the volume buttons for extra light", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
+      //message: "Use the volume buttons for extra light", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
       preferFrontCamera: front,     // Android only, default false
       showFlipCameraButton: flip,   // default false
       showTorchButton: torch,       // iOS only, default false

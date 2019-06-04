@@ -76,8 +76,8 @@
 				858B833718CA111C00AB12DE /* demo */,
 				858B833018CA111C00AB12DE /* Frameworks */,
 				858B832F18CA111C00AB12DE /* Products */,
-				084F5FCE0A5642BF8322899B /* TNSNativeSource */,
 				7413B79CCD8740BB9D2F4716 /* tns-core-modules */,
+				F030DD8369C64BFDB3823BAA /* TNSNativeSource */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,13 +132,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		084F5FCE0A5642BF8322899B /* TNSNativeSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TNSNativeSource;
-			sourceTree = "<group>";
-		};
 		7413B79CCD8740BB9D2F4716 /* tns-core-modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +140,13 @@
 				B0EB60A3B70B4B52A19775D7 /* module.modulemap */,
 			);
 			name = tns-core-modules;
+			sourceTree = "<group>";
+		};
+		F030DD8369C64BFDB3823BAA /* TNSNativeSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TNSNativeSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +380,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 					"\"$(SRCROOT)/../../node_modules/tns-core-modules/platforms/ios/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -406,6 +408,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 					"\"$(SRCROOT)/../../node_modules/tns-core-modules/platforms/ios/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

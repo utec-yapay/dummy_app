@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-44:12
 MERGED from [com.android.support:multidex:1.0.2] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/5edf4e87f5c71e46c98db1fc6fd8b61b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:28.0.0] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/f7f68cc89eb29a31dd3826e3e7818bc5/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:design:28.0.0] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cb654fa8e2789a42dcd2210a987dc278/AndroidManifest.xml:17:1-24:12
@@ -41,9 +41,9 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/alessiayi/.gradle/ca
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/0454d66a7548013318fc823510310b4a/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/5715c88f19d2bb1ed0373ce001afabf9/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/fcbd7b6d4dd7a38f5ec6ba1ed5dd41dd/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:3:6-58
 		INJECTED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml
@@ -170,7 +170,7 @@ ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/and
 	android:name
 		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:19:19-61
 application
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:21:2-42:16
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:21:2-43:16
 MERGED from [com.android.support:design:28.0.0] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cb654fa8e2789a42dcd2210a987dc278/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cb654fa8e2789a42dcd2210a987dc278/AndroidManifest.xml:22:5-20
 MERGED from [:nativescript_barcodescanner:] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/nativescript_barcodescanner.aar/27757052716b7a291b5eb8d739dd25fa/AndroidManifest.xml:16:5-30:19
@@ -196,7 +196,9 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/alessiayi/.g
 	android:name
 		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:22:4-50
 activity#com.tns.NativeScriptActivity
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:28:3-40:14
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:28:3-41:14
+	android:screenOrientation
+		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:33:5-41
 	android:label
 		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:30:5-50
 	android:configChanges
@@ -206,25 +208,25 @@ ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/and
 	android:name
 		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:29:5-48
 meta-data#SET_THEME_ON_LAUNCH
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:34:4-87
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:35:4-87
 	android:resource
-		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:34:50-84
+		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:35:50-84
 	android:name
-		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:34:15-49
+		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:35:15-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:36:4-39:20
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:37:4-40:20
 action#android.intent.action.MAIN
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:37:5-57
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:38:5-57
 	android:name
-		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:37:13-54
+		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:38:13-54
 category#android.intent.category.LAUNCHER
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:38:5-65
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:39:5-65
 	android:name
-		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:38:15-62
+		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:39:15-62
 activity#com.tns.ErrorReportActivity
-ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:41:3-57
+ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:42:3-57
 	android:name
-		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:41:13-55
+		ADDED from /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/AndroidManifest.xml:42:13-55
 uses-permission#android.permission.CAMERA
 ADDED from [:nativescript_barcodescanner:] /Users/alessiayi/.gradle/caches/transforms-1/files-1.1/nativescript_barcodescanner.aar/27757052716b7a291b5eb8d739dd25fa/AndroidManifest.xml:9:5-65
 	android:name

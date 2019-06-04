@@ -1,16 +1,7 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:Barcode="nativescript-barcodescanner" loaded="pageLoaded">
-          <ScrollView>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:Barcode="nativescript-barcodescanner" loaded="pageLoaded" actionBarHidden="true">
+          <FlexboxLayout>
             <StackLayout class="tab-content">
-              <Label class="h3" text="Checking availability"/>
-              <Label class="body" text="It can never hurt to check upfront if a device is capable of scanning a barcode." textWrap="true"/>
-              <Button class="btn btn-primary btn-rounded-sm" text="available?" tap="{{ doCheckAvailable }}"/>
-
-              <Label class="h3" text="Camera permission"/>
-              <Label class="body" text="Android 6+ and iOS 10+ require runtime user consent. The plugin handles it automatically but you can do it manually as well." textWrap="true"/>
-              <Button class="btn btn-outline btn-rounded-sm" text="has permission?" tap="{{ doCheckHasCameraPermission }}"/>
-              <Button class="btn btn-primary btn-rounded-sm" text="request permission" tap="{{ doRequestCameraPermission }}"/>
-
-              <iOS>
+              <!-- <iOS>
                 <Label class="h3" text="Scanner declared in XML"/>
                 <Label class="body" text="Beeps and logs to console when a QR_CODE, EAN_13, or CODE_128 is scanned. The image was added to show how to add an arbitrary overlay." textWrap="true"/>
                 <GridLayout>
@@ -21,29 +12,18 @@
                       reportDuplicates="true"
                       preferFrontCamera="false"
                       scanResult="onScanResult" />
-                  <Image src="~/images/crosshair.png" width="140" height="140" style="margin-top: 14; opacity: 0.3" horizontalAlignment="center" verticalAlignment="center"/>
-                  <!--<Label text="......................................." style="margin-top: 8; color: #FFF; opacity: 0.5" horizontalAlignment="center" verticalAlignment="center"/>-->
                 </GridLayout>
-              </iOS>
+              </iOS> -->
 
-              <Label class="h3" text="Scan QR, UPC_A (including EAN_13), or CODE_128"/>
-              <Label class="body" text="You can use the volume buttons to toggle the torch." textWrap="true"/>
+              <Button class="btn btn-primary btn-rounded-sm" tap="{{ doScanWithBackCamera }}"/>
 
-              <Button class="btn btn-primary btn-rounded-sm" text="back camera, with flip" tap="{{ doScanWithBackCamera }}"/>
-              <Button class="btn btn-primary btn-rounded-sm" text="front camera, no flip" tap="{{ doScanWithFrontCamera }}"/>
-              <Button class="btn btn-primary btn-rounded-sm" text="back camera, with torch" tap="{{ doScanWithTorch }}"/>
-
-              <Label class="h3" text="Continuous scanning (see console)"/>
-              <Button class="btn btn-primary btn-rounded-sm" text="stop after 3 unique results" tap="{{ doContinuousScanMax3 }}"/>
-              <Button class="btn btn-primary btn-rounded-sm" text="unlimited scan, allow duplicates" tap="{{ doContinuousScan }}"/>
-
-              <Android>
+              <!-- <Android>
                 <Label class="h3" text="Orientation lock"/>
                 <Button class="btn btn-primary btn-rounded-sm" text="back camera, portrait" tap="{{ doScanPortrait }}"/>
                 <Button class="btn btn-primary btn-rounded-sm" text="back camera, landscape" tap="{{ doScanLandscape }}"/>
-              </Android>
+              </Android> -->
             </StackLayout>
-          </ScrollView>
+          </FlexboxLayout>
       <!-- <TabViewItem title="About">
         <TabViewItem.view>
           <StackLayout class="tab-content">
