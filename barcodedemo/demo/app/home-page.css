@@ -1,0 +1,16 @@
+FlexboxLayout {
+  background-image: url("~/images/yape.JPG");
+  justify-content: center;
+  background-size: contain;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+}
+.btn-primary {
+  border: none;
+  outline: none;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-color: Transparent;
+  width: 115px;
+  height: 115px;
+}

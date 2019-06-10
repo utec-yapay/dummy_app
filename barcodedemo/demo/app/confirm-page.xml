@@ -1,0 +1,14 @@
+<Page class="page" loaded="loaded" actionBarHidden="true">
+    <!-- <script src="main-page.js"><script> -->
+    <FlexboxLayout>
+        <StackLayout>
+            <Button class="btn btn-second" tap="onTap"/>
+            <Label id="company" text="{{ company }}"
+                style="margin-top:100; width:300; font-size:24" />
+            <Label id="amount" text="{{ amount }}"
+            style="margin-top:10; width:250; font-size:40" />
+            <Button text="CONFIRMAR PAGO" class="btn btn-primary" tap="pagar"
+                style="margin-top:60" />
+        </StackLayout>
+    </FlexboxLayout>
+</Page>

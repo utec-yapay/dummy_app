@@ -3,6 +3,8 @@
 /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/main-view-model.js
 /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/tests/tests.js
 /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/vendor.js
+/Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/confirm-page.js
+/Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/finish-page.js
 /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/main-page.js
 /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/app.js
 /Users/alessiayi/Documents/NatieScript/barcodedemo/demo/platforms/android/app/src/main/assets/app/tns_modules/nativescript-unit-test-runner/test-run-page.js

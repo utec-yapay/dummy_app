@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:Barcode="nativescript-barcodescanner" loaded="pageLoaded" actionBarHidden="true">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:Barcode="nativescript-barcodescanner" loaded="pageLoaded" actionBarHidden="true" class="page">
           <FlexboxLayout>
             <StackLayout class="tab-content">
               <!-- <iOS>
@@ -14,8 +14,7 @@
                       scanResult="onScanResult" />
                 </GridLayout>
               </iOS> -->
-
-              <Button class="btn btn-primary btn-rounded-sm" tap="{{ doScanWithBackCamera }}"/>
+              <Button class="btn btn-primary btn-rounded-sm" tap="{{ doScanWithBackCamera }}" />
 
               <!-- <Android>
                 <Label class="h3" text="Orientation lock"/>

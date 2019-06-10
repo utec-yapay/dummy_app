@@ -1,13 +1,77 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var main_view_model_1 = require("./main-view-model");
+//var main_view_model_1 = require("./main-view-model");
+var observableModule = require("tns-core-modules/data/observable");
+var page;
+
 function pageLoaded(args) {
-    var page = args.object;
-    page.bindingContext = new main_view_model_1.HelloWorldModel();
+    page = args.object;
+    page.bindingContext = new HelloWorldModel();
+    //page.frame.navigate("confirm-page");
+    //resultText = page.bindingContext.result;
 }
 exports.pageLoaded = pageLoaded;
-function onScanResult(scanResult) {
-    console.log("onScanResult: " + scanResult.text + " (" + scanResult.format + ")");
-}
-exports.onScanResult = onScanResult;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi1wYWdlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibWFpbi1wYWdlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEscURBQWtEO0FBR2xELFNBQWdCLFVBQVUsQ0FBQyxJQUEwQjtJQUVuRCxJQUFJLElBQUksR0FBZSxJQUFJLENBQUMsTUFBTSxDQUFDO0lBQ25DLElBQUksQ0FBQyxjQUFjLEdBQUcsSUFBSSxpQ0FBZSxFQUFFLENBQUM7QUFDOUMsQ0FBQztBQUpELGdDQUlDO0FBRUQsU0FBZ0IsWUFBWSxDQUFDLFVBQWU7SUFDMUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxtQkFBaUIsVUFBVSxDQUFDLElBQUksVUFBSyxVQUFVLENBQUMsTUFBTSxNQUFHLENBQUMsQ0FBQztBQUN6RSxDQUFDO0FBRkQsb0NBRUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBvYnNlcnZhYmxlIGZyb20gXCJ0bnMtY29yZS1tb2R1bGVzL2RhdGEvb2JzZXJ2YWJsZVwiO1xuaW1wb3J0ICogYXMgcGFnZXMgZnJvbSBcInRucy1jb3JlLW1vZHVsZXMvdWkvcGFnZVwiO1xuaW1wb3J0IHtIZWxsb1dvcmxkTW9kZWx9IGZyb20gXCIuL21haW4tdmlldy1tb2RlbFwiO1xuXG4vLyBFdmVudCBoYW5kbGVyIGZvciBQYWdlIFwibG9hZGVkXCIgZXZlbnQgYXR0YWNoZWQgaW4gbWFpbi1wYWdlLnhtbFxuZXhwb3J0IGZ1bmN0aW9uIHBhZ2VMb2FkZWQoYXJnczogb2JzZXJ2YWJsZS5FdmVudERhdGEpIHtcbiAgLy8gR2V0IHRoZSBldmVudCBzZW5kZXJcbiAgbGV0IHBhZ2UgPSA8cGFnZXMuUGFnZT5hcmdzLm9iamVjdDtcbiAgcGFnZS5iaW5kaW5nQ29udGV4dCA9IG5ldyBIZWxsb1dvcmxkTW9kZWwoKTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIG9uU2NhblJlc3VsdChzY2FuUmVzdWx0OiBhbnkpIHtcbiAgY29uc29sZS5sb2coYG9uU2NhblJlc3VsdDogJHtzY2FuUmVzdWx0LnRleHR9ICgke3NjYW5SZXN1bHQuZm9ybWF0fSlgKTtcbn1cbiJdfQ==
+
+var observable_1 = require("tns-core-modules/data/observable");
+var dialogs_1 = require("tns-core-modules/ui/dialogs");
+var nativescript_barcodescanner_1 = require("nativescript-barcodescanner");
+var payment;
+var jsonpayment;
+var paymentAmount;
+var companyName;
+var paymentId;
+var companyPhone;
+
+var HelloWorldModel = (function (_super) {
+    __extends(HelloWorldModel, _super);
+    function HelloWorldModel() {
+        var _this = _super.call(this) || this;
+        _this.barcodeScanner = new nativescript_barcodescanner_1.BarcodeScanner();
+        return _this;
+    }
+    HelloWorldModel.prototype.doRequestCameraPermission = function () {
+        this.barcodeScanner.requestCameraPermission().then(function () {
+            console.log("Camera permission requested");
+        });
+    };
+    HelloWorldModel.prototype.doScanWithBackCamera = function () {
+        this.scan(false, false);
+    };
+
+    HelloWorldModel.prototype.scan = function (front, flip, torch, orientation) {
+        this.barcodeScanner.scan({
+            cancelLabelBackgroundColor: "#333333",
+            preferFrontCamera: front,
+            showFlipCameraButton: flip,
+            showTorchButton: torch,
+            torchOn: false,
+            resultDisplayDuration: 500,
+            orientation: orientation,
+            beepOnScan: true,
+            openSettingsIfPermissionWasPreviouslyDenied: true,
+            closeCallback: function () {
+                console.log("Scanner closed @ " + new Date().getTime());
+            }
+        }).then(function (result) {
+
+            console.log("--- scanned: " + result.text);
+
+            payment = result.text;
+            jsonpayment = JSON.parse(payment);
+            module.exports={
+              paymentAmount : jsonpayment.amount,
+              companyName : jsonpayment.companyName,
+              paymentId : jsonpayment.paymentId,
+              companyPhone : jsonpayment.companyPhone
+            }
+
+        }, function (errorMessage) {
+            console.log("No scan. " + errorMessage);
+        }).then(function(result){
+          result=undefined;
+          page.frame.navigate("confirm-page");
+        });
+    };
+    return HelloWorldModel;
+}(observable_1.Observable));
+exports.HelloWorldModel = HelloWorldModel;

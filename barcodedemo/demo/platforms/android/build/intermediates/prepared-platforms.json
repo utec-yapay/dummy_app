@@ -1,8 +1,27 @@
 {
+    "acorn": true,
+    "ajv": true,
+    "base64url": true,
+    "jsrsasign": true,
+    "jwt-decode": true,
+    "jwt-js-decode": true,
     "nativescript-barcodescanner": true,
     "nativescript-theme-core": true,
     "nativescript-unit-test-runner": true,
+    "node-jose": true,
     "tns-core-modules": true,
+    "uuid-parse": true,
+    "fast-deep-equal": true,
+    "fast-json-stable-stringify": true,
+    "json-schema-traverse": true,
+    "uri-js": true,
+    "pako": true,
+    "es6-promise": true,
+    "lodash": true,
+    "long": true,
+    "node-forge": true,
+    "uuid": true,
     "tns-core-modules-widgets": true,
-    "tslib": true
+    "tslib": true,
+    "punycode": true
 }
