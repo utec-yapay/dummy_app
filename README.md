@@ -12,9 +12,11 @@ Install CLI full setup
 https://docs.nativescript.org/start/quick-setup
 
 Clone the repository
-```
+
+`
 git clone https://github.com/utec-yapay/dummy_app.git
-```
+`
+
 Open Sidekick and load dummy_app/barcodedemo/demo
 
 The app works with localhost, in barcodedemo/demo/app/confirm-page.js change the IP in line 28 (not 127.0.0.1)
