@@ -10,7 +10,7 @@ Install CLI full setup
 https://docs.nativescript.org/start/quick-setup
 
 Clone the repository
-git clone 
+git clone https://github.com/utec-yapay/dummy_app.git
 
 Open Sidekick and load dummy_app/barcodedemo/demo
 
