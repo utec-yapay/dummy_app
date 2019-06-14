@@ -8,9 +8,6 @@ FlexboxLayout {
 }
 .btn-primary {
   background-image: url("~/images/botonQR.png");
-  /* border: none;
-  outline: none;
-  overflow: hidden; */
   background-size: contain;
   background-repeat: no-repeat;
   width: 114px;

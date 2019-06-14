@@ -1,22 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//var main_view_model_1 = require("./main-view-model");
+
 var observableModule = require("tns-core-modules/data/observable");
 var dialogs_1 = require("tns-core-modules/ui/dialogs");
 var page;
 var r = require('jsrsasign');
-//const base64url = require('base64url');
-//var jwtJsDecode = require('jwt-js-decode');
-//var d = require('jwt-decode');
-//import { KJUR, KEYUTIL } from './jsrsasign-all-min.js';
-
 
 
 function pageLoaded(args) {
     page = args.object;
     page.bindingContext = new HelloWorldModel();
-    //page.frame.navigate("confirm-page");
-    //resultText = page.bindingContext.result;
 }
 exports.pageLoaded = pageLoaded;
 
@@ -67,26 +60,12 @@ var HelloWorldModel = (function (_super) {
             console.log("--- scanned: " + result.text);
             payment = result.text;
             sJWT = result.text;
-            isValid = r.KJUR.jws.JWS.verifyJWT(sJWT, "0100101101100010010100000110010101010011011010000101011001101101010110010111000100110011011101000011011001110111001110010111101000100100010000110010011001000110001010010100100001000000010011010110001101010001011001100101010001101010010101110110111001011010001011010100101101100010010100000110010101010011011010000101011001101101010110010111000100110011011101000011011001110111001110010111101000100100010000110010011001000110001010010100100001000000010011010110001101010001011001100101010001101010010101110110111001011010001011010100101101100010010100000110010101010011011010000101011001101101010110010111000100110011011101000011011001110111001110010111101000100100010000110010011001000110001010010100100001000000010011010110001101010001011001100101010001101010010101110110111001011010001011010100101101100010010100000110010101010011011010000101011001101101010110010111000100110011011101000011011001110111001110010111101000100100010000110010011001000110001010010100100001000000010011010110001101010001011001100101010001101010010101110110111001011010", {alg: ['HS256']});
+            isValid = r.KJUR.jws.JWS.verifyJWT(sJWT, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", {alg: ['HMAC256']});
             console.log(isValid);
-            if (!isValid){
-              //var headerObj = KJUR.jws.JWS.readSafeJSONString(b64utoutf8(sJWT.split(".")[0]));
-              //var jwt = jwtJsDecode.jwtDecode('token');
-              //console.log(jwt.payload);
+            if (isValid){
               console.log("hasta aca antes");
-              // var si = base64url.decode(sJWT.split(".")[1]);
-              // console.log(si);
-              // var seguro=r.KJUR.jws.JWS.isSafeJSONString(b64utoutf8(sJWT.split(".")[1]));
-              // console.log(seguro);
               console.log(r.b64utoutf8(sJWT.split(".")[1]));
               payloadObj = r.b64utoutf8(sJWT.split(".")[1])
-              //payloadObj = r.KJUR.jws.JWS.readSafeJSONString(b64utoutf8(sJWT.split(".")[1]));
-              // var ca = sJWT;
-              // var base64Url = ca.split('.')[1];
-              // var decodedValue = JSON.parse(window.atob(base64Url));
-              // console.log(decodedValue);
-              // var decoded = d.jwt_decode(sJWT);
-              // console.log(decoded);
               console.log("hasta aca");
               jsonpayment = JSON.parse(payloadObj);
               console.log(jsonpayment.cpn);
@@ -111,7 +90,7 @@ var HelloWorldModel = (function (_super) {
             console.log("No scan. " + errorMessage);
         }).then(function(result){
           result=undefined;
-          if (!isValid){
+          if (isValid){
             page.frame.navigate("confirm-page");
           }
         });
