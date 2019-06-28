@@ -1,0 +1,33 @@
+FlexboxLayout {
+  justify-content: center;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("~/images/confirmado.JPG");
+}
+StackLayout {
+  width: 100%;
+}
+Image {
+  margin-bottom: 20;
+  height: 70;
+}
+Button, Label {
+  margin-bottom: 10;
+}
+.btn-primary {
+  background-color: #2ed1b3;
+  height: 67;
+  font-size: 18;
+  font-family: Tahoma;
+  width: 327;
+}
+Label {
+  border-color: transparent;
+  border-style: dashed;
+  border-width: 5px;
+  color: rgb(125, 125, 125);
+  text-align: center;
+  background-color: white;
+  height: 50;
+  /* font-style: Tahoma; */
+}
