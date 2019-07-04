@@ -1,5 +1,4 @@
 <Page class="page" loaded="loaded" actionBarHidden="true">
-    <!-- <script src="main-page.js"><script> -->
     <FlexboxLayout>
         <StackLayout>
             <Label id="company" text="{{ company }}"
