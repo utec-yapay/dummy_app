@@ -14,13 +14,10 @@ exports.onTap = onTap;
 
 function loaded(args) {
     page = args.object;
-    //page.bindingContext = ();
     var company = page.getViewById("company");
     company.text = payment.cpn;
     console.log(payment.cpn);
     var amount = page.getViewById("amount");
     amount.text = payment.amt;
-    //delete(payment.cpn);
-
 }
 exports.loaded = loaded;
