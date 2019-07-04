@@ -6,13 +6,10 @@ var page;
 const httpModule = require("http");
 var dialogs_1 = require("tns-core-modules/ui/dialogs");
 var r = require('jsrsasign');
-// const uuidParse = require('uuid-parse');
 
 function onTap(args) {
     var button = args.object;
     var page = button.page;
-    //payment.cpn=undefined;
-    //delete(amount);
     page.frame.navigate("main-page");
 
 }
@@ -31,8 +28,6 @@ function pagar(args) {
   var sHeader = JSON.stringify(yHeader);
   var sPayload = JSON.stringify(yBody);
   var sJWT = r.KJUR.jws.JWS.sign("HS256", yHeader, yBody, "2r5u8x/A?D(G-KaPdSgVkYp3s6v9y$B&");
-  // var payid = uuidParse.parse(payment.pid);
-  // console.log(payid);
   httpModule.request({
   url: "http://172.20.10.8:8080/payments/confirm",
   method: "GET",
@@ -63,13 +58,10 @@ exports.pagar = pagar;
 
 function loaded(args) {
     page = args.object;
-    //page.bindingContext = ();
     var company = page.getViewById("company");
     company.text = payment.cpn;
     console.log(payment.cpn);
     var amount = page.getViewById("amount");
     amount.text = payment.amt;
-    //delete(payment.cpn);
-
 }
 exports.loaded = loaded;
