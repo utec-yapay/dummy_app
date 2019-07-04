@@ -1,22 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//var main_view_model_1 = require("./main-view-model");
 var observableModule = require("tns-core-modules/data/observable");
 var dialogs_1 = require("tns-core-modules/ui/dialogs");
 var page;
 var r = require('jsrsasign');
-//const base64url = require('base64url');
-//var jwtJsDecode = require('jwt-js-decode');
-//var d = require('jwt-decode');
-//import { KJUR, KEYUTIL } from './jsrsasign-all-min.js';
-
-
 
 function pageLoaded(args) {
     page = args.object;
     page.bindingContext = new HelloWorldModel();
-    //page.frame.navigate("confirm-page");
-    //resultText = page.bindingContext.result;
 }
 exports.pageLoaded = pageLoaded;
 
@@ -71,25 +62,10 @@ var HelloWorldModel = (function (_super) {
             isValid = r.KJUR.jws.JWS.verifyJWT(sJWT, "2r5u8x/A?D(G-KaPdSgVkYp3s6v9y$B&", {alg: ['HS256']});
 
             console.log(isValid);
-            //console.log(r.KJUR.jws.JWS.verifyJWT(sJWT, "2r5u8x/A?D(G-KaPdSgVkYp3s6v9y$B&", {alg: ['HS256']}));
             if (isValid){
-              //var headerObj = KJUR.jws.JWS.readSafeJSONString(b64utoutf8(sJWT.split(".")[0]));
-              //var jwt = jwtJsDecode.jwtDecode('token');
-              //console.log(jwt.payload);
               console.log("hasta aca antes");
-              // var si = base64url.decode(sJWT.split(".")[1]);
-              // console.log(si);
-              // var seguro=r.KJUR.jws.JWS.isSafeJSONString(b64utoutf8(sJWT.split(".")[1]));
-              // console.log(seguro);
               console.log(r.b64utoutf8(sJWT.split(".")[1]));
               payloadObj = r.b64utoutf8(sJWT.split(".")[1])
-              //payloadObj = r.KJUR.jws.JWS.readSafeJSONString(b64utoutf8(sJWT.split(".")[1]));
-              // var ca = sJWT;
-              // var base64Url = ca.split('.')[1];
-              // var decodedValue = JSON.parse(window.atob(base64Url));
-              // console.log(decodedValue);
-              // var decoded = d.jwt_decode(sJWT);
-              // console.log(decoded);
               console.log("hasta aca");
               jsonpayment = JSON.parse(payloadObj);
               console.log(jsonpayment.cpn);
